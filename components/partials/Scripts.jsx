@@ -1,16 +1,17 @@
 import React from 'react'
+import Script from 'next/script'
 
 const Scripts = () => {
   return (
     <>
-     <script src="/assets/js/jquery-3.5.1.min.js"></script>
-    <script src="/assets/js/bootstrap.bundle.min.js"></script>
-    <script src="/assets/vendor/wow/wow.min.js"></script>
-    <script src="/assets/vendor/owl-carousel/js/owl.carousel.min.js"></script>
-    <script src="/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-    <script src="/assets/vendor/animateNumber/jquery.animateNumber.min.js"></script>
-    <script src="/assets/js/google-maps.js"></script>
-    <script src="/assets/js/theme.js"></script>
+     <Script src="/assets/js/jquery-3.5.1.min.js"></Script>
+    <Script src="/assets/js/bootstrap.bundle.min.js"></Script>
+    <Script src="/assets/vendor/wow/wow.min.js"></Script>
+    <Script src="/assets/vendor/owl-carousel/js/owl.carousel.min.js"></Script>
+    <Script src="/assets/vendor/waypoints/jquery.waypoints.min.js"></Script>
+    <Script src="/assets/vendor/animateNumber/jquery.animateNumber.min.js"></Script>
+    <Script src="/assets/js/google-maps.js"></Script>
+    <Script src="/assets/js/theme.js"></Script>
     </>
   )
 }

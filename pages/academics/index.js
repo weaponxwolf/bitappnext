@@ -6,11 +6,8 @@ import {Container} from 'react-bootstrap';
 const index = () => {
   return (
     <>
-    <Container>
     <Navbar/>
     Academics
-    </Container>
-    
     </>
   )
 }

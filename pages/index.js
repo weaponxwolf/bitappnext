@@ -24,10 +24,10 @@ export default function Home() {
                     <div className="col-lg-6 py-3 wow fadeInUp">
                         <h1 className="mb-4">Great Companies are built on great Products</h1>
                         <p className="text-lg mb-5">Ignite the most powerfull growth engine you have ever built for your company</p>
-                        <a href="/login" className="btn btn-primary btn-split ml-2">Log In <div className="fab"><span className="mai-play"></span></div></a>
-                        {" "}<a href="/auth/google" className="btn btn-primary btn-split ml-2">Sign Up With Google<div className="fab"><span className="mai-play"></span></div></a>
+                        <Link href="/login"><a  className="btn btn-primary btn-split ml-2">Log In <div className="fab"><span className="mai-play"></span></div></a></Link>
+                        {" "}<Link href="/auth/google"><a  className="btn btn-primary btn-split ml-2">Sign Up With Google<div className="fab"><span className="mai-play"></span></div></a></Link>
                         <hr/>
-                        <a href="/clublogin" className="btn btn-primary btn-split ml-2">Login As Club <div className="fab"><span className="mai-play"></span></div></a>
+                        <Link href="/clublogin"><a className="btn btn-primary btn-split ml-2">Login As Club <div className="fab"><span className="mai-play"></span></div></a></Link>
                     </div>
                    
                     
