@@ -1,8 +1,7 @@
 import React,{useEffect,useState} from 'react'
 import Image from 'next/image';
 import Navbar from '../../components/Navbar'
-import Link from 'next/link';
-import {Container,Row,Col,ListGroup} from 'react-bootstrap';
+import {Container,Row,Col,ListGroup, Card} from 'react-bootstrap';
 import axios from 'axios'
 import Cookies from 'js-cookie';
 
@@ -11,7 +10,9 @@ function Posts(){
 
   const [posts, setposts] = useState([])
   useEffect(() => {
-    const token = Cookies.get('userdata');
+    console.log(Cookies.get('userdata'));
+    const token = '..your token..';
+    
     axios.get('http://localhost:3010/posts', {
       headers: {
         'Authorization': `Token ${token}` 
@@ -27,7 +28,9 @@ function Posts(){
     <div className='card mt-3' style={{ boxShadow: "rgba(17, 12, 46, 0.15) 0px 48px 100px 0px"}}>
       <ListGroup >
       {posts.map((post)=>(
-        <ListGroup.Item key={post._id}>{post.title}</ListGroup.Item>
+        <ListGroup.Item key={post._id}>
+        <Card className='px-5 pt-5 py-5'>{post.title}<p>{post.body}</p></Card>
+        </ListGroup.Item>
      ))}
       
  
