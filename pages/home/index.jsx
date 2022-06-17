@@ -1,31 +1,23 @@
 import React,{useEffect,useState} from 'react'
 import Image from 'next/image';
 import Navbar from '../../components/Navbar'
+import Link from 'next/link';
 import {Container,Row,Col,ListGroup} from 'react-bootstrap';
 import axios from 'axios'
 import Cookies from 'js-cookie';
 
-function Post(props){
-  return(
-<>
-</>
-  )
-}
 
 function Posts(){
 
   const [posts, setposts] = useState([])
   useEffect(() => {
-    console.log(Cookies.get('userdata'));
-    const token = '..your token..'
-
+    const token = Cookies.get('userdata');
     axios.get('http://localhost:3010/posts', {
       headers: {
-        'Authorization': `Basic ${token}` 
+        'Authorization': `Token ${token}` 
       }
     })
         .then(response => {
-          console.log(response.data);
           setposts(response.data)
         });
   }, [])
@@ -48,12 +40,11 @@ function LeftSideMenu() {
   return (
     <div className='card mt-3' style={{ boxShadow: "rgba(17, 12, 46, 0.15) 0px 48px 100px 0px"}}>
       <ListGroup >
-  <ListGroup.Item>Cras justo odio</ListGroup.Item>
-  <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-  <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-  <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
-  <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-</ListGroup>
+        <Link href="/posts/newpost"><a><ListGroup.Item style={{display:"flex",alignItems:"center"}}> <div style={{position:"relative",height:"1rem",width:"1rem"}}><Image src="/assets/img/plus.png" layout='fill'/></div>New Post</ListGroup.Item></a></Link>
+        <Link href="/newpost"><a><ListGroup.Item style={{display:"flex",alignItems:"center"}}> <div style={{position:"relative",height:"1rem",width:"1rem"}}><Image src="/assets/img/plus.png" layout='fill'/></div>New Post</ListGroup.Item></a></Link><
+          Link href="/newpost"><a><ListGroup.Item style={{display:"flex",alignItems:"center"}}> <div style={{position:"relative",height:"1rem",width:"1rem"}}><Image src="/assets/img/plus.png" layout='fill'/></div>New Post</ListGroup.Item></a></Link>
+          <Link href="/newpost"><a><ListGroup.Item style={{display:"flex",alignItems:"center"}}> <div style={{position:"relative",height:"1rem",width:"1rem"}}><Image src="/assets/img/plus.png" layout='fill'/></div>New Post</ListGroup.Item></a></Link>
+      </ListGroup>
     </div>
   )
 }
