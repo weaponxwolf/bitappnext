@@ -1,11 +1,10 @@
-import React,{useState,useCallback} from 'react'
-import { Container,Row,Col,ListGroup,ListGroupItem,Form,Button,Card,Textarea } from 'react-bootstrap'
-import Navbar from '../../components/Navbar'
-import Link from 'next/link'
-import Image from 'next/image'
-import axios from 'axios'
-import Dropzone, {useDropzone} from 'react-dropzone'
-import qs from 'qs'
+import React,{useState,useCallback} from 'react';
+import { Container,Row,Col,ListGroup,ListGroupItem,Form,Button,Card,Textarea } from 'react-bootstrap';
+import Navbar from '../../components/Navbar';
+import Link from 'next/link';
+import Image from 'next/image';
+import axios from 'axios';
+import Dropzone, {useDropzone} from 'react-dropzone';
 import Cookies from 'js-cookie';
 
 
@@ -85,6 +84,8 @@ function LeftSideMenu() {
       </div>
     )
   }
+
+
   function RightSideMenu() {
     return (
       <div className='card mt-3' style={{ boxShadow: "rgba(17, 12, 46, 0.15) 0px 48px 100px 0px"}}>
@@ -105,11 +106,11 @@ const newpost = () => {
     <Navbar/>
     <Container>
     <Row>
-      <Col xs="3"><LeftSideMenu/></Col>
-      <Col xs="6">
+      <Col xs="3" style={{marginTop:"100px"}}><LeftSideMenu/></Col>
+      <Col xs="6" style={{marginTop:"100px"}}>
 <CreatePost/>
       </Col>
-      <Col xs="3"><RightSideMenu/></Col>
+      <Col xs="3" style={{marginTop:"100px"}}><RightSideMenu/></Col>
     </Row>
     
     </Container>

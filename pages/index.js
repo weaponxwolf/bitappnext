@@ -1,7 +1,18 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import Cookies from 'js-cookie';
+import { useEffect } from 'react';
+
 export default function Home() {
+    const token = Cookies.get('userdata');
+   useEffect(() => {
+    if (token) {
+        window.location.href="/home";
+    }
+   }, [])
+   
+
   return (
     <div>
       <Head>
