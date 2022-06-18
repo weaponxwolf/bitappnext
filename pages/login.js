@@ -24,7 +24,7 @@ const postForm=(event)=>{
         method: 'POST',
         headers: { 'content-type': 'application/x-www-form-urlencoded' },
         data: qs.stringify(data),
-        url :"http://localhost:3010/login"
+        url :"http://159.223.186.223:3050/login"
     };
     axios(options).then(response=>{
     cookieCutter.set('userdata', response.data);
@@ -79,7 +79,7 @@ const postForm=(event)=>{
             </div>
         </div>
     </header>
-   <Scripts/>
+   {/* <Scripts/> */}
     </>
   )
 }
