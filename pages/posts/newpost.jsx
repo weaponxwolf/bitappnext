@@ -1,11 +1,13 @@
 import React,{useState,useCallback} from 'react';
 import { Container,Row,Col,ListGroup,ListGroupItem,Form,Button,Card,Textarea } from 'react-bootstrap';
 import Navbar from '../../components/Navbar';
+import {useRouter} from 'next/router'
 import Link from 'next/link';
 import Image from 'next/image';
 import axios from 'axios';
 import Dropzone, {useDropzone} from 'react-dropzone';
 import Cookies from 'js-cookie';
+import Scripts from '../_document';
 
 
 function CreatePost(){
@@ -23,7 +25,7 @@ function CreatePost(){
           {
             isDragActive ?
               <p>Drop the files here ...</p> :
-              <p>Drag 'n' drop some files here, or click to select files</p>
+              <p>Drag {"'"}n{"'"} drop some files here, or click to select files</p>
           }
         </div>
       )
@@ -50,6 +52,7 @@ function CreatePost(){
              },
         }).then(response=>{
           console.log(response.data);
+          window.location.href="/home";
         });
         } catch(error) {
           console.log(error)
@@ -79,7 +82,7 @@ function LeftSideMenu() {
     return (
       <div className='card mt-3' style={{ boxShadow: "rgba(17, 12, 46, 0.15) 0px 48px 100px 0px"}}>
         <ListGroup  style={{ borderRadius:"2rem" }}>
-          <Link href="/posts/newpost"><a><ListGroup.Item style={{display:"flex",alignItems:"center"}}> <div style={{position:"relative",height:"1rem",width:"1rem"}}><Image src="/assets/img/plus.png" layout='fill'/></div>New Post</ListGroup.Item></a></Link>
+          <Link href="/posts/newpost"><a><ListGroup.Item style={{display:"flex",alignItems:"center"}}> <div style={{position:"relative",height:"1rem",width:"1rem"}}><Image alt='plus' src="/assets/img/plus.png" layout='fill'/></div>New Post</ListGroup.Item></a></Link>
           </ListGroup>
       </div>
     )

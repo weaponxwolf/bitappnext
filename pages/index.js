@@ -2,17 +2,17 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import Cookies from 'js-cookie';
-import { useEffect } from 'react';
+import { useEffect,useState } from 'react';
+import Scripts from './_document';
 
 export default function Home() {
-    const token = Cookies.get('userdata');
+   const [token, setToken] = useState("");
    useEffect(() => {
+    setToken(Cookies.get('userdata'))
     if (token) {
         window.location.href="/home";
     }
-   }, [])
-   
-
+   }, [token]);
   return (
     <div>
       <Head>
@@ -50,7 +50,6 @@ export default function Home() {
                 </div>
             </div>
         </div>
-
     </div>
   )
 }

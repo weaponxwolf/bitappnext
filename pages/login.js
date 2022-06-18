@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Head from 'next/head'
 import axios from 'axios'
-import Scripts from '../components/partials/Scripts'
+import Scripts from './_document'
 import cookieCutter from 'cookie-cutter';
 
 import qs from 'qs'
@@ -79,7 +79,6 @@ const postForm=(event)=>{
             </div>
         </div>
     </header>
-   <Scripts/>
     </>
   )
 }
