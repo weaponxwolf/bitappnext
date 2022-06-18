@@ -1,12 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Montserrat:wght@500&family=Roboto+Mono&display=swap');
 .profileButtons{
       background-color: white;
       color:black;
       border-radius: 1rem;
       margin-right: 0.5rem;
+      box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
 .appFont{
      color: blue;
+     font-family: 'Roboto Mono', monospace;
 }
 
 .navbarIcons{
@@ -16,4 +21,12 @@
 
 .navbarScroll{
       margin-right: 10rem;
+}
+
+.navlink{
+     margin: 1rem;
+}
+
+.navbar{
+      box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }

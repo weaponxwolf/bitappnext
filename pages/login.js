@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Head from 'next/head'
 import axios from 'axios'
-import Scripts from '../components/partials/Scripts'
+import Scripts from './_document'
 import cookieCutter from 'cookie-cutter';
 
 import qs from 'qs'
@@ -58,7 +58,7 @@ const postForm=(event)=>{
                                 <label htmlFor="exampleInputEmail1">Email address</label>
                                 <input type="email" name="email" className="form-control" id="exampleInputEmail1"
                                     aria-describedby="emailHelp" placeholder="Enter email"/>
-                                <small id="emailHelp" className="form-text text-muted">We'll never share your email with
+                                <small id="emailHelp" className="form-text text-muted">We{`&apos;`}ll never share your email with
                                     anyone else.</small>
                             </div>
                             <div className="form-group">
@@ -79,7 +79,6 @@ const postForm=(event)=>{
             </div>
         </div>
     </header>
-   {/* <Scripts/> */}
     </>
   )
 }
